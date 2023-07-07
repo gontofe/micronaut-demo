@@ -10,16 +10,20 @@ import jakarta.inject.Inject;
 
 @Controller("/greet")
 public class GreetingController {
-    @Inject
+//    @Inject
     private GreetingService greetingService;
+
+    GreetingController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
 
     @Get("/{name}")
     public String greet(String name) {
         return greetingService.getGreeting() + name;
     }
 
-    @Post(value="/{name}", consumes = MediaType.TEXT_PLAIN)
-    public String setGreeting(Body name)  {
+    @Post(consumes = MediaType.TEXT_PLAIN)
+    public String setGreeting(@Body String name)  {
         return greetingService.getGreeting() + name;
     }
 }
