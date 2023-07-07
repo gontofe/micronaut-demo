@@ -6,11 +6,9 @@ import io.micronaut.http.annotation.Body;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.micronaut.http.annotation.Post;
-import jakarta.inject.Inject;
 
 @Controller("/greet")
 public class GreetingController {
-//    @Inject
     private GreetingService greetingService;
 
     GreetingController(GreetingService greetingService) {

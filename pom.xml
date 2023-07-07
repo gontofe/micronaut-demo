@@ -70,6 +70,12 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>io.micronaut</groupId>
+      <artifactId>micronaut-http-client-core</artifactId>
+      <version>3.9.4</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
